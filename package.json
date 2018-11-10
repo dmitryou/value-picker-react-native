@@ -1,0 +1,31 @@
+{
+  "name": "value-picker-react-native",
+  "version": "1.0.0",
+  "description": "Value picker implemented with React Native",
+  "main": "ValuePicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitryou/value-picker-react-native.git"
+  },
+  "keywords": [
+    "picker",
+    "valuePicker",
+    "valuesList"
+  ],
+  "author": "dimax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitryou/value-picker-react-native/issues"
+  },
+  "peerDependencies": {
+    "react": ">= 16.x",
+    "react-native": ">= 0.55.x"
+  },
+  "homepage": "https://github.com/dmitryou/value-picker-react-native#readme",
+  "devDependencies": {
+    "babel-preset-react-native": "^4.0.1"
+  }
+}
