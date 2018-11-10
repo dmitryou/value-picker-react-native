@@ -3,11 +3,11 @@ VALUE PICKER WITH SPECIFIC UI
 
 OIS
 ================================
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/IOS.png)
+![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png | width=100 | height=200)
 
 ANDROID
 ================================
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/Android.png)
+![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/Android.png | width=100 | height=200)
 
 
 How to start:

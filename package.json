@@ -1,6 +1,6 @@
 {
   "name": "value-picker-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Value picker implemented with React Native",
   "main": "ValuePicker.js",
   "scripts": {
