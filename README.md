@@ -7,7 +7,7 @@ OIS
 
 ANDROID
 ================================
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/Android.png)
+![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png)
 
 
 How to start:
