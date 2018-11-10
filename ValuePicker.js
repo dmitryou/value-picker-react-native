@@ -9,7 +9,7 @@ import {
   buildInitialArray,
   buildArrayUp,
   buildArrayDown,
-} from './renderItemUtils';
+} from './utils';
 import ValueItem from './ValueItem';
 
 export default class ValuePicker extends Component<Props> {
