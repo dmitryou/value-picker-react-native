@@ -1,30 +1,26 @@
 import React from 'react';
 import {
   View,
-  Text,
+  Text, StyleSheet,
 } from 'react-native';
 
-const ValueItem = ({ item, mainColor }) => {
+const ValueItem = ({ item, mainColor, textsColor }) => {
 
-  const text = item.text ? item.text.toUpperCase() : ''
+  const text = item.text ? item.text.toUpperCase() : '';
   return (
-    <View style={{
-      flex: 1,
-      alignItems: 'center',
-    }}>
-      <View style={{
-        height: item.height,
-        opacity: item.opacity,
-        width: item.width,
-        backgroundColor: mainColor,
-        borderRadius: 30,
-        marginVertical: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+    <View style={styles.container}>
+      <View style={[
+        {
+          height: item.height,
+          opacity: item.opacity,
+          width: item.width,
+          backgroundColor: mainColor || '#50c878',
+        },
+        styles.itemStyles,
+      ]}>
         <Text style={{
           fontSize: item.fontSize,
-          color: 'white'
+          color: textsColor || 'black'
         }}>
           {text}
         </Text>
@@ -33,5 +29,17 @@ const ValueItem = ({ item, mainColor }) => {
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  itemStyles: {
+    borderRadius: 30,
+    marginVertical: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default ValueItem;

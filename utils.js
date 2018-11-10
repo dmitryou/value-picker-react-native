@@ -1,7 +1,7 @@
-export const buildInitialArray = (initialArray, initialActiveIndex) => {
+export const buildInitialArray = (initialArray, activeIndex) => {
   const textsArray = initialArray.slice(
-    initialActiveIndex - 2,
-    initialActiveIndex + 3);
+    activeIndex - 2,
+    activeIndex + 3);
   const arrayWithStyles = applyStyles(textsArray);
   return arrayWithStyles;
 }

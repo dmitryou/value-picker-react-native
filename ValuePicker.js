@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
-  FlatList,
-  TouchableOpacity,
-  Image, StyleSheet
+  FlatList, StyleSheet,
 } from 'react-native';
 import {
   buildInitialArray,
@@ -11,6 +9,7 @@ import {
   buildArrayDown,
 } from './utils';
 import ValueItem from './ValueItem';
+import Arrow from './Arrow';
 
 export default class ValuePicker extends Component<Props> {
 
@@ -18,8 +17,8 @@ export default class ValuePicker extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      fullData: props.fullData,
-      renderedData: buildInitialArray(props.fullData, props.initialActiveIndex),
+      fullData: props.textsArray,
+      renderedData: buildInitialArray(props.textsArray, props.initialActiveIndex),
       activeIndex: props.initialActiveIndex,
     };
 
@@ -28,10 +27,10 @@ export default class ValuePicker extends Component<Props> {
   componentDidMount() {
     const {
       activeItemCallback,
-      fullData,
+      textsArray,
       initialActiveIndex,
     } = this.props;
-    activeItemCallback(fullData[initialActiveIndex]);
+    activeItemCallback(textsArray[initialActiveIndex]);
   }
 
   scrollUp = () => {
@@ -42,7 +41,6 @@ export default class ValuePicker extends Component<Props> {
     const {
       activeItemCallback,
     } = this.props;
-    console.log('scrollUp');
     this.setState({
       renderedData: buildArrayUp(fullData, activeIndex),
       activeIndex: activeIndex - 1,
@@ -59,7 +57,6 @@ export default class ValuePicker extends Component<Props> {
     const {
       activeItemCallback,
     } = this.props;
-    console.log('scrollDown');
     this.setState({
       renderedData: buildArrayDown(fullData, activeIndex),
       activeIndex: activeIndex + 1,
@@ -72,73 +69,46 @@ export default class ValuePicker extends Component<Props> {
     const {
       renderedData,
       activeIndex,
+      fullData
     } = this.state;
     const {
       mainColor,
+      textsColor,
       arrowImgSrc,
-      fullData
     } = this.props;
     return (
-      <View style={{
-        flex: 1
-      }}>
-        <View
-          style={styles.iconContainer}
-        >
-          <TouchableOpacity
-            onPress={this.scrollUp}
-            disabled={activeIndex === 0}
-          >
-            <Image
-              style={{
-                width: 40,
-                height: 40
-              }}
-              source={arrowImgSrc}
-            />
-          </TouchableOpacity>
-        </View>
+      <View style={styles.staticContainer}>
+        <Arrow
+          onPress={this.scrollUp}
+          arrowImgSrc={arrowImgSrc}
+          disabled={activeIndex === 0}
+        />
         <FlatList
           bounces={false}
           keyExtractor={(item, index) => index.toString()}
           data={renderedData}
-          renderItem={({ item, index }) => {
+          renderItem={({ item }) => {
             return <ValueItem
               item={item}
               mainColor={mainColor}
+              textsColor={textsColor}
             />;
           }}
         />
-        <View
-          style={[
-            styles.iconContainer,
-            styles.iconDown,
-          ]}
-        >
-          <TouchableOpacity
-            onPress={this.scrollDown}
-            disabled={activeIndex === fullData.length - 1}
-          >
-            <Image
-              style={{
-                width: 40,
-                height: 40
-              }}
-              source={arrowImgSrc}
-            />
-          </TouchableOpacity>
-        </View>
+        <Arrow
+          onPress={this.scrollDown}
+          arrowImgSrc={arrowImgSrc}
+          disabled={activeIndex === fullData.length - 1}
+          type={'down'}
+        />
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
-  iconContainer: {
+  staticContainer: {
+    height: 320,
     width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-  iconDown: {
-    transform: [{ rotateX: '180deg' }],
-  }
 });
