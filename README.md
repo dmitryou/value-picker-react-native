@@ -12,14 +12,11 @@ ANDROID
 
 How to start:
 ---------------------------------
-0.Install via npm: <br />
+1.Install via npm: <br />
 ```npm install value-picker-react-native --save```
 
-1.Import in your component : <br />
+2.Import in your component : <br />
     ```import ValuePicker from 'value-picker-react-native';```
-
-2.Add dependencies to your app : <br />
-   ```angular.module('yourApp', ['ionic', 'ionic-steps-bar'])```
 
 3.Usage: <br />
 
