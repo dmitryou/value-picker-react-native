@@ -1,12 +1,9 @@
 ## Value picker with specific UI
-================================
 
 ## OIS
-================================
 ![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png)
 
 ## ANDROID
-================================
 ![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png)
 
 
@@ -21,9 +18,9 @@
 ## Usage
 
 ```<ValuePicker```<br />
-    ```textsArray={textsArray}```<br />
+    ```textsArray={['Item 0', 'Item 1', 'Item 2', 'Item 3', 'Item 4']}```<br />
     ```initialActiveIndex={5}```<br />
-    ```activeItemCallback={this.setActiveItem}```<br />
+    ```activeItemCallback={()=>{console.log('callback to call on Arrow press')}```<br />
     ```mainColor={'#50c878'}```<br />
     ```textsColor={'white'}```<br />
     ```arrowImgSrc={require('./valuePickerReactNative/images/arrowUp.png')}```<br />
