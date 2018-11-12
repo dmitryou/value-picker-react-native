@@ -3,6 +3,7 @@ import {
   View,
   FlatList, StyleSheet,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import {
   buildInitialArray,
   buildArrayUp,
@@ -11,7 +12,7 @@ import {
 import ValueItem from './ValueItem';
 import Arrow from './Arrow';
 
-export default class ValuePicker extends Component<Props> {
+class ValuePicker extends Component<Props> {
 
 
   constructor(props) {
@@ -112,3 +113,28 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
+
+ValuePicker.propTypes = {
+  textsArray: PropTypes.array,
+  initialActiveIndex: PropTypes.number,
+};
+
+ValuePicker.defaultProps = {
+  textsArray: ['Item 0', 'Item 1', 'Item 2', 'Item 3', 'Item 4'],
+  initialActiveIndex: 2,
+  arrowImgSrc: require('./images/arrowUp.png'),
+};
+
+ValueItem.propTypes = {
+  textsArray: PropTypes.array,
+  initialActiveIndex: PropTypes.number,
+  mainColor: PropTypes.string,
+  textsColor: PropTypes.string,
+};
+
+ValueItem.defaultProps = {
+  mainColor: '#50c878',
+  textsColor: 'black',
+};
+
+export default ValuePicker;

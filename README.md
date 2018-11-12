@@ -33,7 +33,7 @@
 | textsArray         | Array     | true     | ['Item 0', 'Item 1', 'Item 2', 'Item 3', 'Item 4']  | Array of values will shown in picker.
 | initialActiveIndex | number    | true     | 3                                                   | Active index. Index of text that will appear in picker firstly.
 | mainColor          | Color     | true     | '#50c878'                                           | Color of active item background.
-| textsColor         | Color     | true     | 'white'                                             | Color of texts.
+| textsColor         | Color     | true     | 'black'                                             | Color of texts.
 | activeItemCallback | function  | true     |  ()=>{}                                             | Callback to call on UP/DOWN click it called with 2 parameters (text, index).
 
 

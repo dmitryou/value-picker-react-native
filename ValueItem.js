@@ -6,7 +6,18 @@ import {
 
 const ValueItem = ({ item, mainColor, textsColor }) => {
 
+  let background;
   const text = item.text ? item.text.toUpperCase() : '';
+  const textIsEmpty = ( text === '');
+
+  if (textIsEmpty) {
+    background = {};
+  } else {
+    background = {
+      backgroundColor: mainColor,
+    };
+  }
+
   return (
     <View style={styles.container}>
       <View style={[
@@ -14,16 +25,21 @@ const ValueItem = ({ item, mainColor, textsColor }) => {
           height: item.height,
           opacity: item.opacity,
           width: item.width,
-          backgroundColor: mainColor || '#50c878',
         },
+        background,
         styles.itemStyles,
       ]}>
-        <Text style={{
-          fontSize: item.fontSize,
-          color: textsColor || 'black'
-        }}>
-          {text}
-        </Text>
+        {
+          (!textIsEmpty) ?
+            <Text style={{
+              fontSize: item.fontSize,
+              color: textsColor
+            }}>
+              {text}
+            </Text> :
+            null
+        }
+
       </View>
     </View>
   );
