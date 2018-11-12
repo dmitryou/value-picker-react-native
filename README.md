@@ -4,7 +4,7 @@
 ![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png)
 
 ## ANDROID
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png)
+https://raw.githubusercontent.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png
 
 
 
