@@ -1,27 +1,24 @@
-VALUE PICKER WITH SPECIFIC UI
+## Value picker with specific UI
 ================================
 
-OIS
+## OIS
 ================================
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png | width=100 | height=200)
+![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png)
 
-ANDROID
+## ANDROID
 ================================
-![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/Android.png | width=100 | height=200)
+![alt text](https://github.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png)
 
 
-How to start:
----------------------------------
-0.Install via npm: <br />
+
+## Install
 ```npm install value-picker-react-native --save```
 
-1.Import in your component : <br />
-    ```import ValuePicker from 'value-picker-react-native';```
+## Import
 
-2.Add dependencies to your app : <br />
-   ```angular.module('yourApp', ['ionic', 'ionic-steps-bar'])```
+```import ValuePicker from 'value-picker-react-native';```
 
-3.Usage: <br />
+## Usage
 
 ```<ValuePicker```<br />
     ```textsArray={textsArray}```<br />
@@ -32,12 +29,14 @@ How to start:
     ```arrowImgSrc={require('./valuePickerReactNative/images/arrowUp.png')}```<br />
 ``` />```<br />
 
+## Properties
 
-Configurable options:
----------------------------------
-textsArray         - ['Item 0', 'Item 1', 'Item 2', 'Item 3', 'Item 4'] - Strings array <br />
-initialActiveIndex - Active index.<br />
-activeItemCallback - Callback to call that called with 2 parameters (text, index).<br />
-mainColor          - Color of active item.<br />
-textsColor         - Filling color(Color that fills steps when increased / decreased.).<br />
-arrowImgSrc        - Source of arrow Up image.<br />
+| Prop               | Type      | Optional | Default                                             | Description
+|--------------------|-----------|----------|-----------------------------------------------------|-------------
+| textsArray         | Array     | true     | ['Item 0', 'Item 1', 'Item 2', 'Item 3', 'Item 4']  | Array of values will shown in picker.
+| initialActiveIndex | number    | true     | 3                                                   | Active index. Index of text that will appear in picker firstly.
+| mainColor          | Color     | true     | '#50c878'                                           | Color of active item background.
+| textsColor         | Color     | true     | 'white'                                             | Color of texts.
+| activeItemCallback | function  | true     |  ()=>{}                                             | Callback to call on UP/DOWN click it called with 2 parameters (text, index).
+
+

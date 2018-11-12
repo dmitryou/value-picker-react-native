@@ -1,6 +1,6 @@
 {
   "name": "value-picker-react-native",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Value picker implemented with React Native",
   "main": "ValuePicker.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "valuesList"
   ],
   "author": "dimax",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dmitryou/value-picker-react-native/issues"
   },
