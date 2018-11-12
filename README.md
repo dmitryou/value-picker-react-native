@@ -1,10 +1,10 @@
 ## Value picker with specific UI
 
 ## OIS
-![](https://github.com/dmitryou/value-picker-react-native/blob/master/images/IOS.png)
+![](https://raw.githubusercontent.com/dmitryou/value-picker-react-native/master/images/IOS.png)
 
 ## ANDROID
-![](https://github.com/dmitryou/value-picker-react-native/blob/master/images/ANDROID.png)
+![](https://raw.githubusercontent.com/dmitryou/value-picker-react-native/master/images/ANDROID.png)
 
 
 
